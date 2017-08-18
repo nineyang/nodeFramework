@@ -15,6 +15,14 @@ module.exports = class User extends Base {
 
     /**
      *
+     */
+    constructor() {
+        super();
+        this.name = 'User';
+    }
+
+    /**
+     *
      * @param ctx
      * @param next
      */
@@ -23,8 +31,8 @@ module.exports = class User extends Base {
     }
 
 
-    userAdd(ctx, next) {
-
+    add(ctx, next) {
+        ctx.body = 'hello , add';
     }
 
     getUserModel() {

@@ -8,7 +8,7 @@ const route = require('../lib/route');
 const router = route.wrapRoute(require('koa-router')());
 
 const routers = router
-    .get('/', 'User@index');
+    .get('/add/:first_name', 'Data#User@add');
 
 module.exports = routers;
 
