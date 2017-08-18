@@ -33,8 +33,6 @@ const route = require('../lib/route').serve();
 
 app.use(route.routes()).use(route.allowedMethods());
 
-
-
 let port = parseInt(process.env.PORT || env.getEnv('ENV_PORT'));
 
 app.listen(port);

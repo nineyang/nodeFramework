@@ -26,15 +26,11 @@ module.exports = class Base {
      * @returns {null|*}
      */
     getDb() {
-        console.log(this);
         if (this.db === null) {
             this.db = helper.withObj(path.join(base.rootPath , 'app/models/Base'));
         }
         return this.db;
     }
 
-    getTest(){
-        return 'hello , test';
-    }
 };
 

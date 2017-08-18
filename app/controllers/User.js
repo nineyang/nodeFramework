@@ -22,15 +22,14 @@ module.exports = class User extends Base {
         ctx.body = 'hello api';
     }
 
-    /**
-     *
-     * @param ctx
-     * @param next
-     */
-    aaa(ctx, next) {
-        ctx.body = 'aaaa';
+
+    userAdd(ctx, next) {
+
     }
 
+    getUserModel() {
+
+    }
 
 };
 

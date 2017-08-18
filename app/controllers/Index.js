@@ -23,16 +23,4 @@ module.exports = class Index extends Base {
             name: 'nine'
         })
     }
-
-    /**
-     *
-     * @param ctx
-     * @param next
-     * @returns {Promise.<void>}
-     */
-    async aa(ctx, next) {
-        ctx.body = await ctx.render('index', {
-            name: 'nine'
-        })
-    }
 };
