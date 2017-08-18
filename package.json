@@ -1,0 +1,25 @@
+{
+  "name": "nine-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=development nodemon ./portal/index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+//  todo 这里后面不需要的包记得清掉
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "koa-swig": "^2.2.1",
+    "mysql": "^2.14.1",
+    "orm": "^3.2.4",
+    "sails-mysql": "^0.11.5",
+    "waterline": "^0.11.11"
+  }
+}
