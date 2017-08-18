@@ -31,17 +31,6 @@ module.exports = class User extends Base {
         ctx.body = 'aaaa';
     }
 
-    /**
-     *
-     * @returns {*}
-     */
-    getUserModel() {
-        console.log(this.getTest());
-        // return helper.withObj(require('../models/User'));
-    }
 
-    getAAA(){
-        return 'helloworld';
-    }
 };
 

@@ -28,11 +28,12 @@ env.getContent().parse();
 
 const orm = require('orm');
 
-
 // 加载路由
 const route = require('../lib/route').serve();
 
 app.use(route.routes()).use(route.allowedMethods());
+
+
 
 let port = parseInt(process.env.PORT || env.getEnv('ENV_PORT'));
 
