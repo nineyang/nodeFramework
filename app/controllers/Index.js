@@ -19,6 +19,7 @@ module.exports = class Index extends Base {
      * @returns {Promise.<void>}
      */
     async index(ctx, next) {
+        console.log(ctx.app);
         ctx.body = await ctx.render('index', {
             name: 'nine'
         })

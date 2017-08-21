@@ -9,6 +9,7 @@
  * @type {module.Base}
  */
 module.exports = class Base {
+
     /**
      *
      */

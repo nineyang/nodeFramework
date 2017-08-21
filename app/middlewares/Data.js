@@ -7,24 +7,35 @@
 const Base = require('./Base');
 const helper = require('../../lib/helper');
 const path = require('path');
+const base = require('../../config/base');
 
 /**
- *
+ * 用于做form层分发的中间件
  * @type {module.Init}
  */
 module.exports = class Data extends Base {
 
     handle(ctx, next) {
-        let method = helper.ucfirst(ctx.url.split('/').pop().split('?').shift());
+        //todo 暂时没有想到很好的办法去获取到当前执行的method，这里先获取第三个好了
+        let method = helper.ucfirst(ctx.url.split('/')[3].split('?').shift());
         let params = ctx.params;
-        let controller = 'User';
-        method = 'Add';
-        let checkFile = require(path.join('../forms' , controller , method));
-        for (let param in params){
-            checkFile['check' + helper.ucfirst(param)].call(this , params[param]);
-        }
+        let controller = this.name;
 
-
-        ctx.body = 'this is init';
+        new Promise((reslove, reject) => {
+            let validateFile = helper.withObj(path.join(base.rootPath, 'app/forms', controller, method));
+            try {
+                for (let param in params) {
+                    validateFile['check' + helper.ucfirst(param)](params[param]);
+                }
+            } catch (err) {
+                reject(err.message);
+            }
+            reslove();
+        }).then(() => {
+            next();
+        }, (err) => {
+            ctx.status = 403;
+            ctx.body = err;
+        });
     }
 };
