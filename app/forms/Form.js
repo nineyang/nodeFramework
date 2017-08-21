@@ -37,7 +37,11 @@ module.exports = class Form {
                 throw new Error(errmsg);
             }
         } else {
-
+            if (typeof type === 'object' && !type.test(value)) {
+                throw new Error(errmsg);
+            } else if (typeof type === 'boolean' && !type) {
+                throw new Error(errmsg);
+            }
         }
         return this;
     }
