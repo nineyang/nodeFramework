@@ -6,7 +6,7 @@
 
 const Koa = require('koa');
 const compose = require('koa-compose');
-const env = require('../lib/env');
+const env = require('../lib/Env');
 const views = require('koa-swig');
 const path = require('path');
 
@@ -29,7 +29,7 @@ env.getContent().parse();
 const orm = require('orm');
 
 // 加载路由
-const route = require('../lib/route').serve();
+const route = require('../lib/Route').serve();
 
 app.use(route.routes()).use(route.allowedMethods());
 

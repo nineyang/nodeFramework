@@ -5,7 +5,7 @@
 'use strict';
 
 const Base = require('./Base');
-const helper = require('../../lib/helper');
+const helper = require('../../lib/Helper');
 const path = require('path');
 const base = require('../../config/base');
 

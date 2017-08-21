@@ -4,7 +4,7 @@
 
 'use strict';
 
-const env = require('../lib/env');
+const env = require('../lib/Env');
 
 let mysql = {
     // module: 'sails-mysql',

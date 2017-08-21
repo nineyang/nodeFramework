@@ -4,7 +4,7 @@
 
 'use strict';
 
-const route = require('../lib/route');
+const route = require('../lib/Route');
 const router = route.wrapRoute(require('koa-router')());
 
 const routers = router
