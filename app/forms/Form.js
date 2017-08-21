@@ -37,8 +37,10 @@ module.exports = class Form {
                 throw new Error(errmsg);
             }
         } else {
+            //针对是正则
             if (typeof type === 'object' && !type.test(value)) {
                 throw new Error(errmsg);
+            //针对是直接判断
             } else if (typeof type === 'boolean' && !type) {
                 throw new Error(errmsg);
             }

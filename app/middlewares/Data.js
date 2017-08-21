@@ -15,6 +15,11 @@ const base = require('../../config/base');
  */
 module.exports = class Data extends Base {
 
+    /**
+     *
+     * @param ctx
+     * @param next
+     */
     handle(ctx, next) {
         //todo 暂时没有想到很好的办法去获取到当前执行的method，这里先获取第三个好了
         let method = helper.ucfirst(ctx.url.split('/')[3].split('?').shift());
@@ -34,8 +39,8 @@ module.exports = class Data extends Base {
         }).then(() => {
             next();
         }, (err) => {
-            ctx.status = 403;
-            ctx.body = err;
+            ctx.response.status = 403;
+            ctx.response.body = err;
         });
     }
 };
