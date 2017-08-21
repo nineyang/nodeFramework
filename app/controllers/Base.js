@@ -32,5 +32,9 @@ module.exports = class Base {
         return this.db;
     }
 
+    getTest(){
+        console.log('this is test');
+    }
+
 };
 

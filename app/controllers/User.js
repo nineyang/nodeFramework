@@ -27,16 +27,13 @@ module.exports = class User extends Base {
      * @param next
      */
     index(ctx, next) {
+        this.getTest();
         ctx.body = 'hello api';
     }
 
 
     add(ctx, next) {
         ctx.body = 'hello , add';
-    }
-
-    getUserModel() {
-
     }
 
 };
