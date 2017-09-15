@@ -4,13 +4,21 @@
 
 'use strict';
 
-const Base = require('./Base');
+const Base = require('./AbstractModel');
 
 /**
  *
  * @type {module.User}
  */
 module.exports = class User extends Base {
+
+    /**
+     *
+     */
+    constructor(){
+        super();
+        this.name = 'user';
+    }
 
 };
 

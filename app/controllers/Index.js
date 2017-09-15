@@ -4,13 +4,13 @@
 
 'use strict';
 
-const Base = require('./Base');
+const AbstractController = require('./AbstractController');
 
 /**
  *
  * @type {module.Index}
  */
-module.exports = class Index extends Base {
+module.exports = class Index extends AbstractController {
 
     /**
      *
@@ -19,9 +19,10 @@ module.exports = class Index extends Base {
      * @returns {Promise.<void>}
      */
     async index(ctx, next) {
-        console.log(ctx.app);
-        ctx.body = await ctx.render('index', {
-            name: 'nine'
-        })
+
+    }
+
+    async detail(ctx , next){
+        ctx.body = 'helloworld';
     }
 };

@@ -9,7 +9,7 @@ const env = require('../lib/Env');
 let mysql = {
     // module: 'sails-mysql',
     host: env.getEnv('DB_HOST') || 'localhost',
-    port: env.getEnv('DB_PORT') || 3309,
+    port: env.getEnv('DB_PORT') || 3308,
     user: env.getEnv('DB_USER') || 'username',
     password: env.getEnv('DB_PASSWORD') || 'password',
     database: env.getEnv('DB_NAME') || 'test',

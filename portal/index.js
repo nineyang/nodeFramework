@@ -26,7 +26,7 @@ app.context.render = co.wrap(views({
 // 配置config
 env.getContent().parse();
 
-const orm = require('orm');
+// const orm = require('orm');
 
 // 加载路由
 const route = require('../lib/Route').serve();
