@@ -31,9 +31,13 @@ module.exports = class User extends AbstractController {
 
     }
 
-    async detail(ctx , next){
+    async detail(ctx, next) {
         let userModel = this.getUserModel();
-        let user = userModel.getTable().findBy({'id' : ctx.params.id});
+        console.log(await userModel.getTable().findBy({'id':ctx.params.id}));
+        // let user = await userModel.getTable().findBy({'id': ctx.params.id});
+        // if (!user) {
+        //    todo 404页面
+        // }
     }
 
 
