@@ -75,15 +75,11 @@ cp .env.example .env.product
 ```
 npm test
 ```
-跑的是`nodemon`，方便调用，默认端口:33011
-
 
 生成环境:
 ```
 npm start
 ```
-跑的是`node`，方便调用，默认端口:33012
-
 
 ## 使用
 
