@@ -1,5 +1,52 @@
 ## 目录
 
+```
+.
+├── README.md
+├── app
+│   ├── controllers
+│   │   ├── AbstractController.js
+│   │   ├── Index.js
+│   │   └── User.js
+│   ├── forms
+│   │   ├── Form.js
+│   │   └── User
+│   │       └── Add.js
+│   ├── middlewares
+│   │   ├── Base.js
+│   │   ├── Data.js
+│   │   ├── Init.js
+│   │   └── Test.js
+│   ├── models
+│   │   ├── AbstractModel.js
+│   │   └── User.js
+│   └── views
+│       └── index.html
+├── config
+│   ├── base.js
+│   └── mysql.js
+├── lib
+│   ├── Db
+│   │   ├── Connector.js
+│   │   ├── Sql
+│   │   │   ├── Add.js
+│   │   │   ├── Base.js
+│   │   │   ├── Delete.js
+│   │   │   ├── Select.js
+│   │   │   └── Update.js
+│   │   └── Table.js
+│   ├── Env.js
+│   ├── Helper.js
+│   └── Route.js
+├── package-lock.json
+├── package.json
+├── portal
+│   └── index.js
+└── routes
+    ├── api.js
+    └── web.js
+```
+
 ## 搭建
 
 1.
