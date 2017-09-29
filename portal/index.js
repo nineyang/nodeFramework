@@ -24,7 +24,7 @@ app.context.render = co.wrap(views({
 }));
 
 // 配置config
-env.getContent().parse();
+env.getContent(process.env.NODE_ENV).parse();
 
 // const orm = require('orm');
 

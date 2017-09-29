@@ -10,7 +10,7 @@ const Base = require('./Base');
  *
  * @type {module.Init}
  */
-module.exports = class Init extends Base {
+module.exports = class Test extends Base {
 
     /**
      *
@@ -18,7 +18,7 @@ module.exports = class Init extends Base {
      * @param next
      */
     async handle(ctx, next) {
-        console.log('aa');
+        console.log('test');
         await next();
     }
 };

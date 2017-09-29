@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=development nodemon ./portal/index"
+    "test": "NODE_ENV=development nodemon ./portal/index",
+    "start": "NODE_ENV=product node ./portal/index"
   },
   "keywords": [],
   "author": "",
