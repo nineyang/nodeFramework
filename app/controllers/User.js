@@ -31,11 +31,10 @@ module.exports = class User extends AbstractController {
 
     }
 
-    async detail(ctx, next) {
-
-    }
-
-
+    /**
+     * 获取Model
+     * @returns {module.User}
+     */
     getUserModel() {
         return new UserModel();
     }

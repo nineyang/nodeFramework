@@ -19,12 +19,8 @@ module.exports = class Index extends AbstractController {
      * @returns {Promise.<void>}
      */
     async index(ctx, next) {
-        ctx.body = await ctx.render('errors/404', {
+        ctx.body = await ctx.render('index', {
             title: 'nine'
         });
-    }
-
-    async detail(ctx , next){
-        ctx.body = 'helloworld';
     }
 };

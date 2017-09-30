@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+.title, .interpretation, .framework {
+    text-align: center;
+}
+
+.title {
+    font-size: 5rem;
+    margin-top: 15rem;
+}
+
+.interpretation {
+    font-size: 2rem;
+}
+
+.framework {
+    font-size: 3rem;
+    margin-top: 15rem;
+}

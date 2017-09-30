@@ -18,9 +18,9 @@ const co = require('co');
 app.context.render = co.wrap(views({
     root: path.join(__dirname, '../app/views'),
     autoescape: true,
-    cache: 'memory',
+    cache: false,
     ext: 'html',
-    writeBody: false
+    writeBody: false,
 }));
 
 app.use(staticServer(path.join(__dirname, '../static')));
