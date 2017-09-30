@@ -1,5 +1,5 @@
 ## 介绍
-一个基于`Koa`封装的`MVC`框架。
+一个基于`Koa`封装的`MVC`框架，在`ORM`上借鉴了我们团队框架[L8](https://github.com/segmentfault)(这个框架后续会开源出来)的设计思想。
 ![frame](/static/image/frame.png)
 
 ## 目录
